@@ -1,6 +1,4 @@
 # startup
 BYU CS260 start up application
 
-Here is a modification FROM GITHUB WOW!
-
-Here's a new fancy modification
+# 1/25 - With this github assignment, I practiced editing from my machine and GitHub directly, adding commits, pushing and pulling, and fixing merge conflicts
