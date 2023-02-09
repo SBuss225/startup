@@ -1,3 +1,11 @@
+#2/8 - Simon
+
+Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\OneDrive\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
+
+URL for simon: https://simon.ucanescape.click/about.html
+
+I learned the most about scripts today, looking at how the deployFiles was set up. I could interpret what all of it meant more or less, but there was a lot of syntax that I wasn't used to.
+
 # 2/1 - Amazon Web Services: Route 53
 
 Web Server URL: http://ucanescape.click/
