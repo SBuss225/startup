@@ -1,4 +1,8 @@
-#2/8 - Simon
+# 2/21 - Simon CSS
+
+A pretty important thing that I learned today was that you have to link the css stylesheet in the html. A lot of the work that I've been doing with html and css has been on already created code that I just edit or add to, so I haven't had a ton of experience setting everything up myself.
+
+# 2/8 - Simon HTML
 
 Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\OneDrive\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
 
