@@ -1,3 +1,8 @@
+# 2/25 - General Tips
+
+-align-items: center and justify-content: center centers items
+-justify-content also has the options space-around, space-between, and space-evenly
+
 # 2/21 - Simon CSS
 
 A pretty important thing that I learned today was that you have to link the css stylesheet in the html. A lot of the work that I've been doing with html and css has been on already created code that I just edit or add to, so I haven't had a ton of experience setting everything up myself.
