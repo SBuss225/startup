@@ -1,7 +1,10 @@
 # 2/25 - General Tips
 
 -align-items: center and justify-content: center centers items
+
 -justify-content also has the options space-around, space-between, and space-evenly
+
+-website for picking color schemes: https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
 
 # 2/21 - Simon CSS
 
