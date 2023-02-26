@@ -4,6 +4,10 @@
   color: white;
 }
 
+a {
+  cursor: url('../key.png'), crosshair;
+}
+
 body {
   background-color: black;
   display: flex;
@@ -61,6 +65,14 @@ footer a {
 
 header {
     flex: 0 80px;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:hover {
+  color: #3D4471;
 }
 
 .line::before {
@@ -137,7 +149,7 @@ menu .nav-item {
 table {
   font-family: 'Julee';
   font-size: 40px;
-  cursor: crosshair;
+  cursor: url('../key.png'), crosshair;
 }
 
 th:hover {
