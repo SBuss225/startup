@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+
+* {
+  color: white;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.center {
+  background-color: black;
+  border-radius: 50%;
+  height: 10px;
+  left: 57%;
+  position: absolute;
+  width: 10px;
+}
+
+.inner {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px black;
+  height: 110px;
+  margin-left: 7px;
+  margin-top: 5px;
+  width: 110px;
+}
+
+.circle {
+  align-items: center;
+  background-color: grey;
+  border-radius: 50%;
+  display: grid;
+  height: 125px;
+  margin-left: 35px;
+  margin-top: 25px;
+  width: 125px;
+}
+
+.clock {
+  z-index: 4;
+  color: blue;
+  left: 1vw;
+  position: absolute;
+  top: 1vh;
+}
+
+.line::before {
+    position: absolute;
+    content: '';
+    height: 45px;
+    width: 7px;
+    background: black;
+    top: 58%;
+    left: calc(50% + 12px);
+    border-radius: 5px;
+    animation: spin 6s linear infinite;
+    transform-origin: top;
+}
+
+.puzzle-background {
+  background-image: url('https://github.com/SBuss225/startup/blob/main/Untitled-Artwork.png?raw=true');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 1000px;
+}
+
+#menu-buttons {
+  align-items: end;
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  min-width: 1000px;
+  position: absolute;
+  width: 100vw;
+  z-index: 4;
+}
+
+.start-page {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+table {
+  font-family: 'Julee';
+  font-size: 40px;
+  cursor: crosshair;
+}
+
+th:hover {
+  color: #7E9AC6;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-180deg)
+    }
+    100% {
+        transform: rotate(180deg)
+    }
+}
