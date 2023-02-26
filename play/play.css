@@ -9,7 +9,7 @@ a {
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(0deg, rgba(15,32,58,1) 5%, rgba(11,53,120,1) 50%, rgba(15,32,58,1) 94%);
   display: flex;
   flex-direction: column;
   min-width: 375px;
@@ -72,7 +72,7 @@ li {
 }
 
 li:hover {
-  color: #3D4471;
+  color: #B6C4EB;
 }
 
 .line::before {
@@ -130,13 +130,14 @@ menu .nav-item {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
-.puzzle-background {
+/*.puzzle-background {
   background-image: url('https://github.com/SBuss225/startup/blob/main/Untitled-Artwork.png?raw=true');
   background-repeat: no-repeat;
   height: 125%;
   position: relative;
   width: 1000px;
 }
+TODO: Reimplement with more fitting picture later */
 
 .start-page {
     align-items: center;
@@ -153,7 +154,20 @@ table {
 }
 
 th:hover {
-  color: #3D4471;
+  color: #B6C4EB;
+}
+
+.title {
+  align-items: center;
+  top: 20vh;
+  display: flex;
+  font-family: 'Julee';
+  justify-content: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 @keyframes spin {
