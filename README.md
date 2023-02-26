@@ -10,6 +10,8 @@
 
 -gradient builder: https://cssgradient.io/
 
+-button example styles: https://getcssscan.com/css-buttons-examples
+
 # 2/21 - Simon CSS
 
 A pretty important thing that I learned today was that you have to link the css stylesheet in the html. A lot of the work that I've been doing with html and css has been on already created code that I just edit or add to, so I haven't had a ton of experience setting everything up myself.
