@@ -5,8 +5,11 @@
 }
 
 body {
-    background-color: black;
-    overflow: hidden;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  overflow: hidden;
 }
 
 .center {
@@ -42,9 +45,22 @@ body {
 .clock {
   z-index: 4;
   color: blue;
-  left: 1vw;
+  left: 1vh;
   position: absolute;
-  top: 1vh;
+  top: 12vh;
+}
+
+footer {
+    flex: 0 30px;
+    z-index: 2;
+}
+
+footer a {
+    float: right;
+}
+
+header {
+    flex: 0 80px;
 }
 
 .line::before {
@@ -60,22 +76,54 @@ body {
     transform-origin: top;
 }
 
-.puzzle-background {
-  background-image: url('https://github.com/SBuss225/startup/blob/main/Untitled-Artwork.png?raw=true');
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 1000px;
+main {
+  align-items: center;
+  display: flex;
+  flex: 1 calc(100vh - 110px);
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  flex-direction: row !important;
+  list-style: none;
 }
 
 #menu-buttons {
   align-items: end;
   display: flex;
   height: 95vh;
-  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 15vh;
   min-width: 1000px;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   z-index: 4;
+}
+
+menu .nav-item {
+  padding: 0 0.3em;
+}
+
+.navbar {
+  background-color: #252729;
+}
+
+.navbar-brand {
+  padding-left: 0.3em;
+  border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+.puzzle-background {
+  background-image: url('https://github.com/SBuss225/startup/blob/main/Untitled-Artwork.png?raw=true');
+  background-repeat: no-repeat;
+  height: 125%;
+  position: relative;
+  width: 1000px;
 }
 
 .start-page {
@@ -93,7 +141,7 @@ table {
 }
 
 th:hover {
-  color: #7E9AC6;
+  color: #3D4471;
 }
 
 @keyframes spin {
