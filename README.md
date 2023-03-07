@@ -1,3 +1,29 @@
+# 3/6 - Tips from Simon JS
+
+-you can store things in localStorage
+ex: localStorage.setItem("userName", HTMLElement.value);
+    localStorage.getItem("userName");
+
+-you can set the window location in js
+ex: window.location.href = "page.html";
+
+-you can set hue, saturation, and light level from js
+ex: this.element.style.backgroundColor = `hsl(hue, 100%, level)`;
+
+-you can load audios in, set volume, and play
+ex: const sound = new Audio(filename);
+    sound.volume = 1;
+    sound.onended = [DO SOMETHING];
+    sound.play();
+    
+    error sound = 'error.mp3'
+    
+-you can set the length of an array: array.length = 10;
+-you can create an array from a map of values 
+ex: array = Array.from(this.myMap.values())
+
+-there's a date type (new Date().toLocaleDateString())
+
 # 2/25 - General Tips
 
 -align-items: center and justify-content: center centers items
