@@ -67,7 +67,7 @@ A pretty important thing that I learned today was that you have to link the css 
 
 # 2/8 - Simon HTML
 
-Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\OneDrive\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
+Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
 
 URL for simon: https://simon.ucanescape.click/about.html
 
