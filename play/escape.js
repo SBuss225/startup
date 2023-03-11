@@ -28,3 +28,5 @@ function pressKey(key) {
   
   document.getElementById("num-screen").innerText = userInput.join("");
 }
+
+document.getElementById("player-name").textContent = localStorage.getItem('userName') ?? 'Profile Name';
