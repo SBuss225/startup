@@ -1,4 +1,4 @@
-const CODE = "123";
+const CODE = "612";
 var userInput = ['*', '*', '*'];
 
 function attemptEscape() {

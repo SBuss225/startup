@@ -24,3 +24,12 @@ body {
     width: 100vw;
     z-index: 2;
 }
+
+.puzzle {
+    color: blue;
+    font-family: "Impact", sans-serif;
+    font-size: 30px;
+    position: absolute;
+    width: 50vw;
+    z-index: 5;
+}
