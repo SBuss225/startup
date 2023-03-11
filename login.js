@@ -6,6 +6,7 @@ function signup() {
     localStorage.setItem("username", userNameEl.value);
     localStorage.setItem("email", emailEl.value);
     localStorage.setItem("password", passwordEl.value);
+    localStorage.setItem("escaped", false);
 
     window.location.href = "play/play.html";
 }
@@ -16,6 +17,7 @@ function login() {
 
     localStorage.setItem("username", userNameEl.value);
     localStorage.setItem("password", passwordEl.value);
+    localStorage.setItem("escaped", false);
 
     window.location.href = "play/play.html";
 }
