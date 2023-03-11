@@ -1,3 +1,54 @@
+# 3/10 - Startup JS tips
+
+- Command to deploy website: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s startup
+
+- you can store things in localStorage
+
+    localStorage.setItem("userName", HTMLElement.value);
+   
+    localStorage.getItem("userName");
+
+- you can set the window location in js
+
+    window.location.href = "page.html";
+
+- you can set hue, saturation, and light level from js
+
+    this.element.style.backgroundColor = `hsl(hue, 100%, level)`;
+
+- you can load audios in, set volume, and play
+
+    const sound = new Audio(filename);
+    
+    sound.volume = 1;
+    
+    sound.onended = [DO SOMETHING];
+    
+    sound.play();
+    
+    error sound = 'error.mp3';
+    
+- you can set the length of an array: array.length = 10;
+
+- you can create an array from a map of values 
+
+    array = Array.from(this.myMap.values());
+
+- there's a date type (new Date().toLocaleDateString())
+
+- you can create html elements from js
+
+    const tableData = document.createElement('td'); // for table data
+    
+    const tableRow = document.createElement('tr'); // for table row
+    
+    tableRow.appendChild(tableData);
+
+- when doing a for-loop, you can loop through multiple items each time
+
+    const [i, score] of array.entries()
+
+
 # 2/25 - General Tips
 
 -align-items: center and justify-content: center centers items
@@ -18,7 +69,7 @@ A pretty important thing that I learned today was that you have to link the css 
 
 # 2/8 - Simon HTML
 
-Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\OneDrive\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
+Command to run simon on my domain: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
 
 URL for simon: https://simon.ucanescape.click/about.html
 
