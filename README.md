@@ -1,8 +1,6 @@
-# 3/10 - Startup JS
+# 3/10 - Startup JS tips
 
 - Command to deploy website: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s startup
-
-# 3/6 - Tips from Simon JS
 
 - you can store things in localStorage
 
