@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+                content="width=device-width, initial-scale=1.0" />
+        <title>Can U Escape?</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="keypad.css" />
+    </head>
+
+    <body>
+        <div class="back">
+            <a id="give-up" class="nav-link" href="wallone.html">
+                <button>&larr;</button>
+            </a> 
+        </div>
+
+        <div class="escape-status">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" id="locked" viewBox="0 0 16 16">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" id="unlocked" viewBox="0 0 16 16">
+              <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+            </svg>
+          </div>
+
+        <div class="interactables">
+            <div class="keypad-background"></div>
+              <div class="keypad">
+                <button class="key" onclick="pressKey('1')" role="button">1</button>
+                <button class="key" onclick="pressKey('2')" role="button">2</button>
+                <button class="key" onclick="pressKey('3')" role="button">3</button>
+                <button class="key" onclick="pressKey('4')" role="button">4</button>
+                <button class="key" onclick="pressKey('5')" role="button">5</button>
+                <button class="key" onclick="pressKey('6')" role="button">6</button>
+                <button class="key" onclick="pressKey('7')" role="button">7</button>
+                <button class="key" onclick="pressKey('8')" role="button">8</button>
+                <button class="key" onclick="pressKey('9')" role="button">9</button>
+              </div>
+            </div>
+
+            <div class="unlock">
+                <div id="num-screen">
+                    ***
+                </div>
+                <button class="escape" onclick="attemptEscape()" role="button">Escape</button>
+            </div>
+        </div>
+    </body>
+    <script src="escape.js"></script>
+</html>

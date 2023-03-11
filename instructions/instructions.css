@@ -6,6 +6,7 @@ body {
     background: linear-gradient(0deg, rgba(15,32,58,1) 5%, rgba(11,53,120,1) 50%, rgba(15,32,58,1) 94%);
     height: fit-content;
     min-width: 375px;
+    overflow-x: hidden;
 }
 
 footer {
@@ -56,6 +57,7 @@ main {
   
   .navbar {
     background-color: #252729;
+    height: 10vh;
   }
   
   .navbar-brand {
@@ -81,7 +83,7 @@ main {
   .demo-box {
     box-shadow: 0 5px 10px black;
     color: #D2DEEC;
-    margin: 1rem 0;
+    margin: 50px 0;
     border: thin solid #7e9ac6;
     border-radius: 0.25rem;
     padding: 1rem;
@@ -96,4 +98,20 @@ main {
     height: 200px;
     background: gray;
   }
+
+  ::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 15px;
+  }
   
+  ::-webkit-scrollbar-track {
+    background: rgba(1,33,100,1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(11,53,120,1);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(21,63,130,1);
+  }
