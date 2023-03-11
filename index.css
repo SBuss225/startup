@@ -33,15 +33,7 @@ footer a {
     float: right;
 }
 
-form {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
-}
-
-form > button {
+.form-div > button {
     background-color: #0B3578;
     border: none;
     border-radius: 5px;
@@ -53,7 +45,11 @@ form > button {
 }
 
 .form-div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     height: 90%;
+    justify-content: space-evenly;
     width: 80%;
 }
 

@@ -8,7 +8,7 @@
         <link rel="gstatic" href="https://fonts.gstatic.com" />
 
         <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+        <link type="text/css" href="slide navbar style.css">
 
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -38,22 +38,22 @@
                 <input type="checkbox" id="chk" aria-hidden="true"> 
 
                     <div class="signup">
-                        <form class="form-div">
+                        <div class="form-div">
                             <label for="chk" aria-hidden="true">Sign up</label>
-                            <input type="text" name="username" placeholder="Username">
-                            <input type="text" name="email" placeholder="Email">
-                            <input type="text" name="password" placeholder="Password">
-                            <button type="submit">Sign up</button>
-                        </form>
+                            <input id="s-username" type="text" name="username" placeholder="Username">
+                            <input id="s-email" type="text" name="email" placeholder="Email">
+                            <input id="s-password" type="text" name="password" placeholder="Password">
+                            <button type="submit" onclick="signup()">Sign up</button>
+                        </div>
                     </div>
                     <div class="login">
                         <div class="login-div">
-                            <form class="form-div" id="login-form">
+                            <div class="form-div" id="login-form">
                                 <label for="chk" aria-hidden="true" id="login-label">Login</label>
-                                <input type="text" name="email" placeholder="Email">
-                                <input type="text" name="password" placeholder="Password">
-                                <button type="submit">Login</button>
-                            </form>
+                                <input id="l-username" type="text" name="username" placeholder="Username">
+                                <input id="l-password" type="text" name="password" placeholder="Password">
+                                <button type="submit" onclick="login()">Login</button>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -68,5 +68,7 @@
                     >GitHub</a>
             </div>
         </footer>
+
+        <script src="login.js"></script>
     </body>
 </html>

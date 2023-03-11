@@ -4,10 +4,6 @@
   color: white;
 }
 
-a {
-  cursor: url('../key.png'), crosshair;
-}
-
 body {
   background: linear-gradient(0deg, rgba(15,32,58,1) 5%, rgba(11,53,120,1) 50%, rgba(15,32,58,1) 94%);
   display: flex;
@@ -139,6 +135,10 @@ menu .nav-item {
 }
 TODO: Reimplement with more fitting picture later */
 
+#start {
+  cursor: url('../assets/key-cursor.png'), crosshair;
+}
+
 .start-page {
     align-items: center;
     display: flex;
@@ -148,9 +148,9 @@ TODO: Reimplement with more fitting picture later */
 }
 
 table {
+  cursor: pointer;
   font-family: 'Julee';
   font-size: 40px;
-  cursor: url('../key.png'), crosshair;
 }
 
 th:hover {

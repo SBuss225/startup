@@ -1,0 +1,26 @@
+.background {
+    border: 20px solid #343434;
+    box-shadow: 0 2px 50px rgba(255, 255, 255, .5);
+    height: 90vh;
+    width: 90vw;
+}
+
+body {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 5vh 5vw;
+}
+
+.nav-buttons {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+    position: absolute;
+    width: 100vw;
+    z-index: 2;
+}
