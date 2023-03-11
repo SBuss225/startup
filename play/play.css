@@ -126,6 +126,10 @@ menu .nav-item {
   border-bottom: solid rgb(182, 182, 182) thin;
 }
 
+#player-name {
+  margin: 15px;
+}
+
 /*.puzzle-background {
   background-image: url('https://github.com/SBuss225/startup/blob/main/Untitled-Artwork.png?raw=true');
   background-repeat: no-repeat;
