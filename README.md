@@ -1,3 +1,11 @@
+# 3/22 - Web Services
+
+- Configure directory to work with Node.js: npm init -y
+- Set up express: npm install express
+- Main files should be under a 'public' directory within the project
+
+Running simon command: ./deployService.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
+
 # 3/10 - Startup JS tips
 
 - Command to deploy website: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s startup
