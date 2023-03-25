@@ -1,3 +1,35 @@
+# 3/25 - Simon DB
+
+### Mongo setup with env vars:
+- const userName = process.env.MONGOUSER;
+- const password = process.env.MONGOPASSWORD;
+- const hostname = process.env.MONGOHOSTNAME;
+
+### Mongo connection url
+- const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+
+### Create Mongo Client in JS
+- const client = new MongoClient(url);
+
+### Basic MongoDB functions
+- collection = client.db('<dbName>').collection('<collectionName>');
+- collection.insertOne(<jsObject>) // Object in JSON format
+- query = {<jsObject>: {$gt: 0}}; // gt = greater than
+- options = { sort: {<jsObject>: -1}, limit: 10, }; // sort 1 = ascending, -1 = descending
+- cursor = collection.find(query, options); // find() with no parameters returns everything
+- cursor.toArray()
+
+### Connecting express and MongoDB
+- const DB = require('<databaseFunctionsFile>');
+- call db functions in html request functions
+
+example:
+// GetScores
+apiRouter.get('/scores', async (_req, res) => {
+  const scores = await DB.getHighScores();
+  res.send(scores);
+});
+
 # 3/22 - Web Services
 
 - Configure directory to work with Node.js: npm init -y
