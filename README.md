@@ -1,6 +1,15 @@
 # 3/25 - Simon DB
 
-### Mongo setup with env vars:
+### Set up env vars for production website
+- ssh into website
+- sudo nano /etc/environment
+- add user, password, and hostname env vars like below:
+
+export MONGOUSER=<username>
+export MONGOPASSWORD=<password>
+export MONGOHOSTNAME=<hostname>
+
+### Mongo setup in js with env vars:
 - const userName = process.env.MONGOUSER;
 - const password = process.env.MONGOPASSWORD;
 - const hostname = process.env.MONGOHOSTNAME;
