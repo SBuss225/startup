@@ -1,3 +1,17 @@
+# 3/27 - Simon Login
+
+### Setting up Routers
+- var apiRouter = express.Router(); // standard router
+- var secureApiRouter = express.Router(); // verifies credentials before passing on request
+- apiRouter.use(secureApiRouter)
+
+### Functions related to logging in/out
+- apiRouter.post(<function>, async (req, res) => {});
+- '/auth/create'
+- '/auth/login'
+- '/auth/logout'
+- '/user/:email' // gets info about a user based on an email var
+
 # 3/25 - Simon DB
 
 ### Set up env vars for production website
