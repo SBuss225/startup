@@ -1,3 +1,14 @@
+# 3/29 - Simon Websocket
+
+### Creating a Websocket
+- const wss = new WebSocketServer({ noServer: true });
+- protocol upgrade from HTTP to WebSocket
+- track connections: wss.on('connection', (ws) => { const connection = id: uuid.v4(), alive: true, ws: ws }; connections.push(connection));
+
+### Send info over socket
+- const event = { <JSObject> };
+- this.socket.send(JSON.stringify(event));
+
 # 3/27 - Simon Login
 
 ### Setting up Routers
