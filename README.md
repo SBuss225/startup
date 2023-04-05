@@ -1,5 +1,6 @@
 # 4/5 - Other Startup info
 - Random public apis: https://apilist.fun/ 
+- Advice api used in my startup: https://api.adviceslip.com/?ref=apilist.fun
 
 # 3/29 - Simon Websocket
 
