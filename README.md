@@ -1,3 +1,6 @@
+# 4/5 - Other Startup info
+- Random public apis: https://apilist.fun/ 
+
 # 3/29 - Simon Websocket
 
 ### Creating a Websocket
