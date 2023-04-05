@@ -1,0 +1,23 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "- Command to deploy website: ./deployFiles.sh -k C:\\Users\\sarah\\Desktop\\CS260\\cs260W2023.pem -h ucanescape.click -s startup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBuss225/startup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SBuss225/startup/issues"
+  },
+  "homepage": "https://github.com/SBuss225/startup#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

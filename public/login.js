@@ -1,3 +1,5 @@
+app.use(express.static('public'));
+
 function signup() {
     const userNameEl = document.getElementById("s-username");
     const emailEl = document.getElementById("s-email");
