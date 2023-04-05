@@ -1,3 +1,98 @@
+# 4/5 - Other Startup info
+- Random public apis: https://apilist.fun/ 
+- Advice api used in my startup: https://api.adviceslip.com/?ref=apilist.fun
+
+# 3/29 - Simon Websocket
+
+### Creating a Websocket
+- const wss = new WebSocketServer({ noServer: true });
+- protocol upgrade from HTTP to WebSocket
+- track connections: wss.on('connection', (ws) => { const connection = id: uuid.v4(), alive: true, ws: ws }; connections.push(connection));
+
+### Send info over socket
+- const event = { <JSObject> };
+- this.socket.send(JSON.stringify(event));
+
+# 3/27 - Simon Login
+
+### Setting up Routers
+- var apiRouter = express.Router(); // standard router
+- var secureApiRouter = express.Router(); // verifies credentials before passing on request
+- apiRouter.use(secureApiRouter)
+
+### Functions related to logging in/out
+- apiRouter.post(<function>, async (req, res) => {});
+- '/auth/create'
+- '/auth/login'
+- '/auth/logout'
+- '/user/:email' // gets info about a user based on an email var
+
+### Calling endpoints
+const response = await fetch(endpoint, {
+
+    method: 'post',
+    
+    body: JSON.stringify({ email: userName, password: password }),
+    
+    headers: {
+    
+      'Content-type': 'application/json; charset=UTF-8',
+      
+    },
+    
+  });
+  
+  const body = await response.json();
+
+# 3/25 - Simon DB
+
+### Set up env vars for production website
+- ssh into website
+- sudo nano /etc/environment
+- add user, password, and hostname env vars like below:
+
+export MONGOUSER=<username>
+export MONGOPASSWORD=<password>
+export MONGOHOSTNAME=<hostname>
+
+### Mongo setup in js with env vars:
+- const userName = process.env.MONGOUSER;
+- const password = process.env.MONGOPASSWORD;
+- const hostname = process.env.MONGOHOSTNAME;
+
+### Mongo connection url
+- const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+
+### Create Mongo Client in JS
+- const client = new MongoClient(url);
+
+### Basic MongoDB functions
+- collection = client.db('<dbName>').collection('<collectionName>');
+- collection.insertOne(<jsObject>) // Object in JSON format
+- query = {<jsObject>: {$gt: 0}}; // gt = greater than
+- options = { sort: {<jsObject>: -1}, limit: 10, }; // sort 1 = ascending, -1 = descending
+- cursor = collection.find(query, options); // find() with no parameters returns everything
+- cursor.toArray()
+
+### Connecting express and MongoDB
+- const DB = require('<databaseFunctionsFile>');
+- call db functions in html request functions
+
+example:
+// GetScores
+apiRouter.get('/scores', async (_req, res) => {
+  const scores = await DB.getHighScores();
+  res.send(scores);
+});
+
+# 3/22 - Web Services
+
+- Configure directory to work with Node.js: npm init -y
+- Set up express: npm install express
+- Main files should be under a 'public' directory within the project
+
+Running simon command: ./deployService.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s simon
+
 # 3/10 - Startup JS tips
 
 - Command to deploy website: ./deployFiles.sh -k C:\Users\sarah\Desktop\CS260\cs260W2023.pem -h ucanescape.click -s startup
