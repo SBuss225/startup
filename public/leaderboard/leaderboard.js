@@ -8,19 +8,26 @@ async function loadScores() {
         console.log("successfully fetched scores from api: \n", scores);
 
         localStorage.setItem('scores', JSON.stringify(scores));
+        displayScores(scores, true);
     } catch {
         console.log("error: couldn't fetch scores from api")
         const scoresText = localStorage.getItem('scores');
         if (scoresText) {
             scores = JSON.parse(scoresText);
         }
+        displayScores(scores, false);
     }
 
-    displayScores(scores);
+    
 }
 
-function displayScores(scores) {
+function displayScores(scores, success) {
     const tableBody = document.querySelector('#scores');
+
+    if (scores.length === 0) {
+        tableBody.innerHTML = '<tr><td colSpan=4>Log in to view the leaderboard</td></tr>';
+        return;
+    }
 
     if (scores.length === 0) {
         tableBody.innerHTML = '<tr><td colSpan=4>No one has ever escaped this room. Will you be the first?</td></tr>';

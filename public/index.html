@@ -25,17 +25,16 @@
                 <a class="navbar-brand" href="#">U Can Escape</sup></a>
                 <menu class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="play/play.html">Play</a></li>
-                    <li class="nav-item"><a class="nav-link" href="leaderboard/leaderboard.html">Leaderboard</a></li>
+                    <li class="nav-item" id="play" style="display: none;"><a class="nav-link" href="play/play.html">Play</a></li>
+                    <li class="nav-item" id="leaderboard" style="display: none;"><a class="nav-link" href="leaderboard/leaderboard.html">Leaderboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="about/about.html">About</a></li>
                 </menu>
             </nav>
         </header>
 
         <main class="container-fluid text-center">
-            <div class="main-box">
+            <div class="main-box" id="loginControls" style="display: none">
                 <input type="checkbox" id="chk" aria-hidden="true"> 
-
                     <div class="signup">
                         <div class="form-div">
                             <label for="chk" aria-hidden="true">Sign up</label>
@@ -56,6 +55,18 @@
                         </div>
                     </div>
             </div>
+            <div class="main-box" id="playControls" style="display: none">
+                <div class="controls">
+                    <div id="playerName"></div>
+                    <button type="button" class="btn btn-primary" onclick="play()">
+                        Play
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="logout()">
+                        Logout
+                    </button>
+                </div>
+            </div>
+            <div id="error"></div>
         </main>
 
         <footer class="bg-dark text-dark text-muted">

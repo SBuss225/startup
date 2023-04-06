@@ -10,6 +10,11 @@ body {
     overflow: hidden;
 }
 
+.controls {
+    padding-top: 20vh;
+    padding-right: 50px;
+}
+
 #chk {
     display: none;
 }
