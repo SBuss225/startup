@@ -166,6 +166,11 @@ menu .nav-item {
     border-bottom: solid rgb(182, 182, 182) thin;
 }
 
+#player-messages {
+    position: absolute;
+    right: 0;
+}
+
 .signup {
     align-items: center;
     display: flex;

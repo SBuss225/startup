@@ -1,3 +1,10 @@
+// Event messages
+const PLAYER_ONLINE = 'playerOnline';
+const PLAYER_OFFLINE = 'playerOffline';
+
+var socket;
+setupWS();
+
 (async () => {
     let authenticated = false;
     localStorage.setItem("authenticated", false);
@@ -33,6 +40,39 @@ async function getUser(email) {
     return null;
 }
 
+function setupWS() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    this.socket.onopen = (event) => {
+      this.displayMsg('system', 'game', 'connected');
+    };
+    this.socket.onclose = (event) => {
+      this.displayMsg('system', 'game', 'disconnected');
+    };
+    this.socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+      if (msg.type === PLAYER_ONLINE) {
+        this.displayMsg('player', msg.from, ' is online! Say hello!');
+      } else if (msg.type === PLAYER_OFFLINE) {
+        this.displayMsg('player', msg.from, ' has just logged out. Goodbye!')
+      }
+    };
+}
+
+function displayMsg(cls, from, msg) {
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML =
+      `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+  }
+
+function broadcastEvent(from, type) {
+    const event = {
+      from: from,
+      type: type,
+    };
+    this.socket.send(JSON.stringify(event));
+  }
+
 async function signup() {    
     localStorage.setItem('escaped', false);
 
@@ -51,6 +91,7 @@ async function signup() {
     if (response?.status === 200) {
         localStorage.setItem('username', username);
         localStorage.setItem("authenticated", true);
+        this.broadcastEvent(username, PLAYER_ONLINE);
         window.location.href = 'play/play.html';
     } else {
         const errorEl = document.querySelector('#error');
@@ -78,6 +119,7 @@ async function login() {
     if (response?.status === 200) {
         localStorage.setItem('username', username);
         localStorage.setItem("authenticated", true);
+        this.broadcastEvent(username, PLAYER_ONLINE);
         window.location.href = 'play/play.html';
     } else {
         const errorEl = document.querySelector('#error');
@@ -91,7 +133,10 @@ function play() {
 }
   
 function logout() {
+    let username = localStorage.getItem('username');
+
     localStorage.setItem("authenticated", false);
+    this.broadcastEvent(username, PLAYER_OFFLINE);
     fetch(`/api/auth/logout`, {
         method: 'delete',
     }).then(() => (window.location.href = '/'));
