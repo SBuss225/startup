@@ -21,9 +21,9 @@
             <div class="timer-background">
                 Time Remaining:
                 <div class="time">
-                    <div id="hours">1:</div>
-                    <div id="minutes">00:</div>
-                    <div id="seconds">00</div>
+                    <div id="hours">-:</div>
+                    <div id="minutes">--:</div>
+                    <div id="seconds">--</div>
                 </div>
             </div>
         </div>
@@ -38,10 +38,10 @@
             </div>
             <div class="door-buttons">
                 <a id="give-up" class="nav-link" href="play.html">
-                    <button>Give Up</button>
+                    <button onclick="clearTimer()">Give Up</button>
                 </a>
                 <a id="escape" class="nav-link" href="keypad.html">
-                    <button onclick="getTime()">Escape</button>
+                    <button onclick="pauseTime()">Escape</button>
                 </a>
             </div>
         </div>
