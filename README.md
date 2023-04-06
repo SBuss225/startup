@@ -2,7 +2,7 @@
 - Random public apis: https://apilist.fun/ 
 - Advice api used in my startup: https://api.adviceslip.com/?ref=apilist.fun
 
-# 3/29 - Simon Websocket
+# 3/29 - Websockets
 
 ### Creating a Websocket
 - const wss = new WebSocketServer({ noServer: true });
@@ -13,7 +13,7 @@
 - const event = { <JSObject> };
 - this.socket.send(JSON.stringify(event));
 
-# 3/27 - Simon Login
+# 3/27 - Authentication
 
 ### Setting up Routers
 - var apiRouter = express.Router(); // standard router
@@ -27,7 +27,7 @@
 - '/auth/logout'
 - '/user/:email' // gets info about a user based on an email var
 
-### Calling endpoints
+### Node.js endpoints
 const response = await fetch(endpoint, {
 
     method: 'post',
