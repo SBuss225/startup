@@ -44,6 +44,16 @@ body {
     position: relative;
 }
 
+header {
+    height: 100px;
+    left: 6%;
+    padding-top: 50px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
 .interactables {
     display: flex;
     flex-direction: row;
@@ -62,4 +72,23 @@ body {
     position: absolute;
     width: 100vw;
     z-index: 2;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+}
+
+.timer-background {
+    align-items: center;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    display: flex;
+    font-size: 20px;
+    height: 10vh;
+    justify-content: space-around;
+    min-width: 300px;
+    width: 20%;
 }

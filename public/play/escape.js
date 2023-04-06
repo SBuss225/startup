@@ -1,8 +1,13 @@
 const CODE = "612";
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
 var userInput = ['*', '*', '*'];
 var playerName = getPlayerName();
 
 function attemptEscape() {
+  
   if (CODE == userInput.join("")) {
     document.getElementById("locked").style.display = "none";
     document.getElementById("unlocked").style.display = "block";
@@ -12,6 +17,11 @@ function attemptEscape() {
   }
   userInput = ['*', '*', '*'];
   document.getElementById("num-screen").innerText = userInput.join("");
+}
+
+function getTime() {
+  localStorage.setItem("escapeTime", START_TIME - timeLeft);
+  console.log("final time: ", START_TIME - timeLeft);
 }
 
 function displayAdvice(data) {
@@ -71,3 +81,59 @@ async function saveScore(time) {
     console.log("TODO: handle error in escape.js");
   }
 }
+
+function displayTime(timeLeftHours, timeLeftMinutes, timeLeftSeconds) {
+  hoursEl.textContent = timeLeftHours + ":";
+  minutesEl.textContent = timeLeftMinutes + ":";
+  secondsEl.textContent = timeLeftSeconds;
+}
+
+var countDownTime = 0;
+var isRunning = false;
+var timeLeft = 0;
+var timeLeftHours = 0;
+var timeLeftMinutes = 0;
+var timeLeftSeconds = 0;
+
+const HOUR = 3600000;
+const MINUTE = 60000;
+const SECOND = 1000;
+const START_TIME = 3600000;
+
+class Timer {
+
+  constructor() {
+    this.startTimer();
+  }
+
+  startTimer() {
+      countDownTime = new Date().getTime() + HOUR;
+      isRunning = true;
+  }
+
+  updateTimer = setInterval( function updateTimer() {
+    if (isRunning) {
+        var currTime = new Date().getTime();
+        timeLeft = countDownTime - currTime;
+        timeLeftHours = Math.floor((timeLeft % (HOUR * 24)) / HOUR);
+        timeLeftMinutes = Math.floor((timeLeft % HOUR) / MINUTE);
+        timeLeftSeconds = Math.floor((timeLeft % MINUTE) / SECOND);
+        displayTime(timeLeftHours, timeLeftMinutes, timeLeftSeconds);
+    }
+  }, 1000);
+
+  getFinalTime() {
+      let escapeTime = START_TIME - timeLeft;
+      this.timeLeftHours = Math.floor((escapeTime % (HOUR * 24)) / HOUR);
+      this.timeLeftMinutes = Math.floor((escapeTime % HOUR) / MINUTE);
+      this.timeLeftSeconds = Math.floor((escapeTime % MINUTE) / SECOND);
+      let timeString = timeLeftHours + ":" + timeLeftMinutes + ":" + timeLeftSeconds;
+      return timeString;
+  }
+
+  stopTimer() {
+    isRunning = false;
+  }
+}
+
+var timer = new Timer();

@@ -14,8 +14,20 @@
         />
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="wallone.css" />
-        <script src="escape.js"></script>
     </head>
+
+    <header>
+        <div class="timer">
+            <div class="timer-background">
+                Time Remaining:
+                <div class="time">
+                    <div id="hours">1:</div>
+                    <div id="minutes">00:</div>
+                    <div id="seconds">00</div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <body>
         <div class="interactables">
@@ -29,7 +41,7 @@
                     <button>Give Up</button>
                 </a>
                 <a id="escape" class="nav-link" href="keypad.html">
-                    <button>Escape</button>
+                    <button onclick="getTime()">Escape</button>
                 </a>
             </div>
         </div>
@@ -47,6 +59,7 @@
                 </svg>
             </a>
         </div>
-        <img src="https://github.com/SBuss225/startup/blob/main/assets/room-front.png?raw=true" class="background"></div>
+        <img src="https://github.com/SBuss225/startup/blob/main/public/assets/room-front.png?raw=true" class="background"></div>
+        <script src="escape.js"></script>
     </body>
 </html>

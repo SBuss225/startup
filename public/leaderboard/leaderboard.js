@@ -2,12 +2,14 @@ async function loadScores() {
     let scores = [];
 
     try {
-        const response = await fetch("/api/scores");
+        const response = await fetch('/api/scores');
         scores = await response.json();
 
         console.log("successfully fetched scores from api: \n", scores);
 
         localStorage.setItem('scores', JSON.stringify(scores));
+        const test = localStorage.getItem('escapeTime');
+        console.log("TEST: ", test);
         displayScores(scores, true);
     } catch {
         console.log("error: couldn't fetch scores from api")
@@ -24,7 +26,7 @@ async function loadScores() {
 function displayScores(scores, success) {
     const tableBody = document.querySelector('#scores');
 
-    if (scores.length === 0) {
+    if (!success) {
         tableBody.innerHTML = '<tr><td colSpan=4>Log in to view the leaderboard</td></tr>';
         return;
     }

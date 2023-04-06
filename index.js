@@ -62,7 +62,7 @@ var secureApiRouter = express.Router();
 apiRouter.use(secureApiRouter);
 
 secureApiRouter.use(async (req, res, next) => {
-  authToken = req.cookies[authCookieName];
+  authToken = req.cookies["token"];
   const user = await DB.getUserByToken(authToken);
   if (user) {
     next();
