@@ -1,3 +1,54 @@
+# 4/7 - Converting to React Framework
+
+### Reorganize Code
+- Delete "node_modules" directory
+- Move service code (package, package-lock, index, database, peerProxy) to "service" subdirectory
+- Run npm install in service directory
+- Rename "public" directory to "old-public"
+
+### Create/Clean up template React application
+- command: npx create-react-app template-react
+- new "template-react" directory will contain basic config/template React code
+- uninstall unnecessary packages (stats, test) and unnecessary files (images)
+- add .jsx extension to any JSX files
+- tailor favicon.ico, manifest.json, and index.html
+- move files from template-react directory to my directory
+- delete template-react directory
+
+### Bootstrap
+- npm install bootstrap react-bootstrap
+- import bootstrap in desired components like app.jsx (import 'bootstrap/dist/css/bootstrap.min.css';)
+
+### Create view components
+- in the src directory, create a new directory for each view components (ex: src/login/login.jsx)
+- example view component: 
+```jsx
+import React from 'react';
+
+export function Login() {
+  return (
+    <main className='container-fluid bg-secondary text-center'>
+      <div>login displayed here</div>
+    </main>
+  );
+}
+```
+
+### Create router
+- npm install react-router-dom
+- include component in index.jsx and app.jsx <BrowserRouter> <App /> </BrowserRouter>
+
+### Convert html pages to react components (.jsx files)
+- copy html over as return val of component
+- rename class attribute to "className"
+- delete header and footer (except in app.jsx)
+- copy JavaScript over as inner functions of React component
+- create css file and import in the corresponding jsx
+- create React state variables
+- replace DOM query selectors with React state vars
+- lift states up to parent components as necessary
+- create child comps as necessary
+
 # 4/5 - Other Startup info
 - Random public apis: https://apilist.fun/ 
 - Advice api used in my startup: https://api.adviceslip.com/?ref=apilist.fun
