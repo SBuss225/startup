@@ -1,3 +1,13 @@
+# 4/26 - Final Review
+
+- HTTP headers: Content-Type, Host, Cookie, but not Language
+- Cookies allow server to store info on client
+- HTTP response statuses: 200 = success, 300 = caching or content redirects, 400 = client error, 500 = server error
+- JSX purposes: inject HTML into JS, componentize HTML, allow for composability of HTML
+- NPM install: adds to package.json, adds to node_modules, locks package version
+- fetch = usable from front and back end
+- Linux daemon: starts up on reboot, independent of user, PM2 = daemon, can fork other processes
+
 # 4/7 - Converting to React Framework
 
 ### Reorganize Code
